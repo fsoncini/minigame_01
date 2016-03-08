@@ -15,7 +15,10 @@ public class ScoreManager : MonoBehaviour {
 
 
 	private float clockSpeed = 1f;
-
+	private AudioSource sound01;
+	void Start () {
+		sound01 = GetComponent<AudioSource> ();
+	}
 
 	void Awake () 
 	{
@@ -43,6 +46,7 @@ public class ScoreManager : MonoBehaviour {
 	void CheckGameOver()
 	{
 		Time.timeScale = 0;
+		sound01.PlayOneShot(sound01.clip);
 		gameOverText.text = ("YOU WON " + score + " COINS" );
 		gameOver.SetActive(true);
 		/*
