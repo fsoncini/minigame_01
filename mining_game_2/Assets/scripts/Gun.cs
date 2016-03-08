@@ -5,6 +5,8 @@ public class Gun : MonoBehaviour {
 
 	public GameObject claw;
 	public bool isShooting;
+	public Gun anotherGun;
+
 	public Animator minerAnimator;
 	public Claw clawScript;
 
@@ -36,8 +38,13 @@ public class Gun : MonoBehaviour {
 
 	public void CollectedObject()
 	{
+		anotherGun.isShooting = false;
 		isShooting = false;
+
 		minerAnimator.speed = 1;
+		anotherGun.minerAnimator.speed = 1;
+
 		GetComponent<Renderer> ().enabled = true;
+		anotherGun.GetComponent<Renderer> ().enabled = true;
 	}
 }

@@ -32,16 +32,17 @@ public class Claw : MonoBehaviour {
 		//anotherClaw.transform.position = Vector3.MoveTowards (transform.position, target, step);
 		lineRenderer.SetPosition(0, origin.position);
 		lineRenderer.SetPosition(1, transform.position);
-		if (transform.position == origin.position && retracting)
-		{
-			gun.CollectedObject();
-			if (hitJewel)
-			{
-				scoreManager.AddPoints(jewelValue);
+		if (transform.position == origin.position || anotherClaw.transform.position == anotherClaw.origin.position ) {
+			if (retracting){
+				gun.CollectedObject ();
+			if (hitJewel) {
+			//	scoreManager.AddPoints (jewelValue);
 				hitJewel = false;
 			}
-			Destroy(childObject);
-			gameObject.SetActive(false);
+			Destroy (childObject);
+			gameObject.SetActive (false);
+			anotherClaw.gameObject.SetActive (false);
+		}
 		}
 	}
 
