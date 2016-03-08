@@ -8,6 +8,8 @@ public class Gun : MonoBehaviour {
 	public Animator minerAnimator;
 	public Claw clawScript;
 
+	//private Vector3 origin = transform;
+
 
 	void Update () 
 	{
@@ -22,6 +24,9 @@ public class Gun : MonoBehaviour {
 	{
 		isShooting = true;
 		minerAnimator.speed = 0;
+	//	renderer.enabled = false;
+		GetComponent<Renderer> ().enabled = false;
+
 		RaycastHit hit;
 		Vector3 down = transform.TransformDirection(Vector3.down);
 
@@ -36,5 +41,6 @@ public class Gun : MonoBehaviour {
 	{
 		isShooting = false;
 		minerAnimator.speed = 1;
+		GetComponent<Renderer> ().enabled = true;
 	}
 }
