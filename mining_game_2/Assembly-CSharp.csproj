@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\Claw.cs" />
      <Compile Include="Assets\scripts\Gun.cs" />
+     <Compile Include="Assets\scripts\Gun2.cs" />
      <Compile Include="Assets\scripts\ScoreManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -4,9 +4,12 @@ using System.Collections;
 public class Claw : MonoBehaviour {
 
 	public Transform origin;
+	public Transform anotherOrigin;
+	public Claw anotherClaw;
 	public float speed = 4f;
 	public Gun gun;
 	public ScoreManager scoreManager;
+
 
 	private Vector3 target;
 	private int jewelValue = 1;
@@ -26,6 +29,7 @@ public class Claw : MonoBehaviour {
 	{
 		float step = speed * Time.deltaTime;
 		transform.position = Vector3.MoveTowards (transform.position, target, step);
+		//anotherClaw.transform.position = Vector3.MoveTowards (transform.position, target, step);
 		lineRenderer.SetPosition(0, origin.position);
 		lineRenderer.SetPosition(1, transform.position);
 		if (transform.position == origin.position && retracting)
@@ -50,6 +54,7 @@ public class Claw : MonoBehaviour {
 	{
 		retracting = true;
 		target = origin.position;
+		anotherClaw.target = anotherOrigin.position;
 
 		if (other.gameObject.CompareTag("Coin"))
 		{

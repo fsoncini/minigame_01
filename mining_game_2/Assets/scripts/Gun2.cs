@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Gun : MonoBehaviour {
+public class Gun2 : MonoBehaviour {
 
 	public GameObject claw;
 	public bool isShooting;
 	public Animator minerAnimator;
 	public Claw clawScript;
+
+	//private Vector3 origin = transform;
+
 
 	void Update () 
 	{
@@ -21,17 +24,17 @@ public class Gun : MonoBehaviour {
 	{
 		isShooting = true;
 		minerAnimator.speed = 0;
-		GetComponent<Renderer> ().enabled = false;//delete the original hand
+	//	renderer.enabled = false;
+		GetComponent<Renderer> ().enabled = false;
 
 		RaycastHit hit;
 		Vector3 down = transform.TransformDirection(Vector3.down);
-	
+
 		if(Physics.Raycast(transform.position, down, out hit, 100))
 		{
 			claw.SetActive(true);
 			clawScript.ClawTarget(hit.point);
 		}
-
 	}
 
 	public void CollectedObject()
