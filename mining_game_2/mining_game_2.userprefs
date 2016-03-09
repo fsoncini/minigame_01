@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ScoreManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Gun.cs">
     <Files>
-      <File FileName="Assets\scripts\Coin.cs" Line="25" Column="2" />
-      <File FileName="Assets\scripts\Claw.cs" Line="46" Column="44" />
-      <File FileName="Assets\scripts\Gun.cs" Line="18" Column="42" />
-      <File FileName="Assets\scripts\ScoreManager.cs" Line="46" Column="1" />
+      <File FileName="Assets\scripts\Claw.cs" Line="81" Column="4" />
+      <File FileName="Assets\scripts\Coin.cs" Line="16" Column="2" />
+      <File FileName="Assets\scripts\Gun.cs" Line="24" Column="17" />
+      <File FileName="Assets\scripts\ScoreManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
