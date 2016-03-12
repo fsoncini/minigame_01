@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour {
 
 	void Awake () 
 	{
-		scoreText.text = ("Coin: 0");// + "/" + targetScore);
+		scoreText.text = ("Coin: 0");
 
 		InvokeRepeating("Clock", 0, clockSpeed);
 	}
@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour {
 	public void AddPoints(int pointScored)
 	{
 		score += pointScored;
-		scoreText.text = ("Coin: " + score);// + "/" + targetScore);
+		scoreText.text = ("Coin: " + score);
 	}
 
 	void CheckGameOver()
@@ -49,18 +49,5 @@ public class ScoreManager : MonoBehaviour {
 		sound01.PlayOneShot(sound01.clip);
 		gameOverText.text = ("YOU WON " + score + " COINS" );
 		gameOver.SetActive(true);
-		/*
-		if (score >= targetScore)
-		{
-			Time.timeScale = 0;
-			youWon.SetActive(true);
-		}
-		else
-		{
-			Time.timeScale = 0;
-			gameOver.SetActive(true);
-		}
-*/
-}
-
+	}
 }
